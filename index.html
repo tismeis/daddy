@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Autoplay with Redirect</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        video {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original to idhar hai ;D</h1>
+    <video id="localVideo" autoplay controls>
+        <source src="santaacm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        // Configuration
+        const contestURL = "https://www.hackerrank.com/31-dayz-of-code"; // HackerRank contest URL
+        const redirectDelay = 500; // Time in seconds before redirecting
+
+        // Redirect to HackerRank contest after the specified delay
+        setTimeout(() => {
+            window.location.href = contestURL;
+        }, redirectDelay * 1000); // Convert seconds to milliseconds
+    </script>
+</body>
+</html>
